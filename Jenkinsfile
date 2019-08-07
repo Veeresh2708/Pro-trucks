@@ -4,7 +4,7 @@ agent
 label "Linux"
 }
 	stages{
-		stage('SonarQube analysis') {
+		stage("SonarQube analysis") {
 			withSonarQubeEnv('My SonarQube Server') {
 			sh 'mvn clean package sonar:sonar'
 			} // SonarQube taskId is automatically attached to the pipeline context
