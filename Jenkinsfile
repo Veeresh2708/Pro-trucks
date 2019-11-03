@@ -19,7 +19,7 @@ stages{
 	}
 	stage("Creating Docker Image"){
 		steps{
-			withCredentials([usernamePassword(credentialsId: 'Docker login ID', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
+			withCredentials([usernamePassword(credentialsId: 'Docker_Id', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
         		      sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
               		      sh" docker build -t tomcat:buildimage$BUILD_NUMBER ."
               		      sh" docker tag tomcat:buildimage veereshvanga/pro_trucks:buildimage$BUILD_NUMBER"
