@@ -14,7 +14,7 @@ stages{
 	stage("Building the Code"){
 		steps{
 			build job: 'Maven Build' , wait: false
-      			sh "echo 'Build completed with null errors "
+      			sh "echo 'Build completed with null errors' "
 		}
 	}
 }
