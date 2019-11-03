@@ -1,7 +1,7 @@
 pipeline{
-agent
+agent 
 {
-lable " unix "
+label "unix"
 }
 
 stages{
