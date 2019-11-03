@@ -24,6 +24,7 @@ stages{
               		      sh" docker build -t tomcat:buildimage$BUILD_NUMBER ."
               		      sh" docker tag tomcat:buildimage veereshvanga/pro_trucks:buildimage$BUILD_NUMBER"
               	 	      sh" docker push veereshvanga/pro_trucks"
+			}
 			      sh" echo 'Image pushed to Docker Hub Syucessfully'"
 		}
 	}
