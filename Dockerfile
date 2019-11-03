@@ -15,7 +15,7 @@ ENV TOMCAT_MAJOR 8
 ENV TOMCAT_VERSION 8.5.39
 ENV TOMCAT_TGZ_URL https://www.apache.org/dist/tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz
 
-COPY /Pro-trucks/Maven Build/target/*.war $CATALINA_HOME/webapps/
+COPY /tmp/workspace/Pro-trucks/Maven Build/target/*.war $CATALINA_HOME/webapps/
 
 EXPOSE 8888
 CMD ["catalina.sh", "run"]
