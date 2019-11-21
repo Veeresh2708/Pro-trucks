@@ -3,7 +3,7 @@ agent
 {
 lable "any"
 }
-Stages{
+stages{
 	stage("Clonig from Git repo"){
 		steps{
 			
@@ -12,14 +12,14 @@ Stages{
 		}
 	}
 	
-	Stage("Building the Code"){
+	stage("Building the Code"){
 		steps{
 			mvn clean install
 			sh "echo 'Code build has been completed'"
 		}
 	}
 	
-	Stage("Sonar Analysis"){
+	stage("Sonar Analysis"){
 		steps{
 			withSonarQubeEnv('My SonarQube Server') {
                 // Optionally use a Maven environment you've configured already
@@ -30,7 +30,7 @@ Stages{
 		}
 	}
 	
-	Stage ("Moving the war file to artifactory"){
+	stage ("Moving the war file to artifactory"){
 		steps{
 			tUpload (
                 buildName: 'Test',
