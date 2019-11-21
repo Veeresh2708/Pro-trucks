@@ -1,0 +1,20 @@
+---
+- host: 172.168.1.1
+  tasks:        
+        name: "installing Nginx
+        apt:
+            name: "nginx"
+            state: present
+      - name: "Install Zip"
+        apt:
+            name: "zip"
+            state: present
+      - name: "Installing Unzip"
+        apt:
+            name: "unzip"
+            state: present
+      - name: "Coping the file"
+        copy:
+            src: "/tmp/test.txt"
+            dest: "/tmp/testing.txt"
+            
