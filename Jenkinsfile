@@ -17,7 +17,7 @@ pipeline {
                     currentBuild.displayName = VER
                     sh  "echo $VER"          
                 }
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'token', url: 'https://github.com/Veeresh2708/Pro-trucks.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/service_release3']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'token', url: 'https://github.com/Veeresh2708/Pro-trucks.git']]])
 			}
 				
 		}
