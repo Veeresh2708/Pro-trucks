@@ -20,8 +20,7 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/service_release3']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'token', url: 'https://github.com/Veeresh2708/Pro-trucks.git']]])
 			}
 				
-		}
-				
+		}	
 		stage('Build') {
 		environment {
 		 	GIT_COMMIT = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
