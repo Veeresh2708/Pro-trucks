@@ -15,7 +15,7 @@ spec:
         app: web
     spec:
       containers:
-      - name: testnginx
-        image: nginx
+      - name: protrucks-container
+        image: veereshvanga/protrucks:buildimage1
         ports:
         - containerPort: 80
