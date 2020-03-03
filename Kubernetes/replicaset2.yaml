@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: tomcat-replicaset
+  namespace: development
+  labels:
+    app: tomcat
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: tomcat
+  template:
+    metadata:
+      labels:
+        app: tomcat
+    spec:
+      containers:
+      - name: tomcat-containers
+        image: tomcat
+        ports:
+        - containerPort: 80
